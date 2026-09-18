@@ -117,6 +117,33 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="AMOUNT_MUST_BE_HIGHER_THAN_ZERO" xml:space="preserve">
+    <value>O valor deve ser maior que 0</value>
+  </data>
+  <data name="BARBER_NAME_LENGTH_INVALID" xml:space="preserve">
+    <value>O nome do barbeiro deve ter entre 2 e 80 caracteres</value>
+  </data>
+  <data name="CANCELLED_BILLING_AMOUNT_MUST_BE_ZERO" xml:space="preserve">
+    <value>O valor da cobrança cancelada deve ser zero</value>
+  </data>
+  <data name="CLIENT_NAME_LENGTH_INVALID" xml:space="preserve">
+    <value>O nome do cliente deve ter entre 2 e 120 caracteres</value>
+  </data>
+  <data name="DATE_REQUIRED" xml:space="preserve">
+    <value>A data é obrigatória</value>
+  </data>
+  <data name="NOTES_LENGTH_INVALID" xml:space="preserve">
+    <value>As observações devem ter no máximo 500 caracteres</value>
+  </data>
+  <data name="PAYMENT_TYPE_INVALID" xml:space="preserve">
+    <value>Tipo de pagamento inválido</value>
+  </data>
+  <data name="SERVICE_NAME_LENGTH_INVALID" xml:space="preserve">
+    <value>O nome do serviço deve ter entre 2 e 120 caracteres</value>
+  </data>
+  <data name="STATUS_TYPE_INVALID" xml:space="preserve">
+    <value>Status inválido</value>
+  </data>
   <data name="UNKNOWN_ERROR" xml:space="preserve">
     <value>Erro desconhecido</value>
   </data>

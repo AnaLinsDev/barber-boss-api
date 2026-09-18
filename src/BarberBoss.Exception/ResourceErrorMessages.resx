@@ -117,6 +117,40 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="AMOUNT_MUST_BE_HIGHER_THAN_ZERO" xml:space="preserve">
+    <value>Amount must be greater than or equal to 0
+</value>
+  </data>
+  <data name="BARBER_NAME_LENGTH_INVALID" xml:space="preserve">
+    <value>Barber name must be between 2 and 80 characters
+</value>
+  </data>
+  <data name="CANCELLED_BILLING_AMOUNT_MUST_BE_ZERO" xml:space="preserve">
+    <value>Cancelled billing amount must be zero
+</value>
+  </data>
+  <data name="CLIENT_NAME_LENGTH_INVALID" xml:space="preserve">
+    <value>Client name must be between 2 and 120 characters
+</value>
+  </data>
+  <data name="DATE_REQUIRED" xml:space="preserve">
+    <value>Date is required
+</value>
+  </data>
+  <data name="NOTES_LENGTH_INVALID" xml:space="preserve">
+    <value>Notes must be 500 characters or less</value>
+  </data>
+  <data name="PAYMENT_TYPE_INVALID" xml:space="preserve">
+    <value>Payment type is invalid</value>
+  </data>
+  <data name="SERVICE_NAME_LENGTH_INVALID" xml:space="preserve">
+    <value>Service name must be between 2 and 120 characters
+</value>
+  </data>
+  <data name="STATUS_TYPE_INVALID" xml:space="preserve">
+    <value>Status is invalid
+</value>
+  </data>
   <data name="UNKNOWN_ERROR" xml:space="preserve">
     <value>Unknown error</value>
   </data>

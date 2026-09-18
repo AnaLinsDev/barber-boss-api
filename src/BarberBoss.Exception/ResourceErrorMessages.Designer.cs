@@ -61,6 +61,94 @@ namespace BarberBoss.Exception {
         }
         
         /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Amount must be greater than or equal to 0
+        ///.
+        /// </summary>
+        public static string AMOUNT_MUST_BE_HIGHER_THAN_ZERO {
+            get {
+                return ResourceManager.GetString("AMOUNT_MUST_BE_HIGHER_THAN_ZERO", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Barber name must be between 2 and 80 characters
+        ///.
+        /// </summary>
+        public static string BARBER_NAME_LENGTH_INVALID {
+            get {
+                return ResourceManager.GetString("BARBER_NAME_LENGTH_INVALID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Cancelled billing amount must be zero
+        ///.
+        /// </summary>
+        public static string CANCELLED_BILLING_AMOUNT_MUST_BE_ZERO {
+            get {
+                return ResourceManager.GetString("CANCELLED_BILLING_AMOUNT_MUST_BE_ZERO", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Client name must be between 2 and 120 characters
+        ///.
+        /// </summary>
+        public static string CLIENT_NAME_LENGTH_INVALID {
+            get {
+                return ResourceManager.GetString("CLIENT_NAME_LENGTH_INVALID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Date is required
+        ///.
+        /// </summary>
+        public static string DATE_REQUIRED {
+            get {
+                return ResourceManager.GetString("DATE_REQUIRED", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Notes must be 500 characters or less.
+        /// </summary>
+        public static string NOTES_LENGTH_INVALID {
+            get {
+                return ResourceManager.GetString("NOTES_LENGTH_INVALID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Payment type is invalid.
+        /// </summary>
+        public static string PAYMENT_TYPE_INVALID {
+            get {
+                return ResourceManager.GetString("PAYMENT_TYPE_INVALID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Service name must be between 2 and 120 characters
+        ///.
+        /// </summary>
+        public static string SERVICE_NAME_LENGTH_INVALID {
+            get {
+                return ResourceManager.GetString("SERVICE_NAME_LENGTH_INVALID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Status is invalid
+        ///.
+        /// </summary>
+        public static string STATUS_TYPE_INVALID {
+            get {
+                return ResourceManager.GetString("STATUS_TYPE_INVALID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Unknown error.
         /// </summary>
         public static string UNKNOWN_ERROR {
