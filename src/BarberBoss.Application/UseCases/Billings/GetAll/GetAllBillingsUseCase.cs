@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using BarberBoss.Communication.Requests;
 using BarberBoss.Communication.Responses;
 using BarberBoss.Domain.Repositories;
 
@@ -13,13 +14,21 @@ public class GetAllBillingsUseCase : IGetAllBillingsUseCase
         _repository = repository;
     }
 
-    public async Task<ResponseBillingsJson> Execute()
+    public async Task<ResponseBillingsJson> Execute(RequestGetAllBillings request)
     {
-        var result = await _repository.GetAll();
+        var result = await _repository.GetAll(
+         request.OrderBy,
+         request.Order,
+         request.FilterBy,
+         request.Page);
 
         return new ResponseBillingsJson
         {
-            Billings = _mapper.Map<List<ResponseShortBillingJson>>(result)
+            Billings = _mapper.Map<List<ResponseShortBillingJson>>(result.Items),
+            TotalPages = result.TotalPages,
+            CurrentPage = result.CurrentPage,
+            TotalItems = result.TotalItems,
         };
     }
+        
 }

@@ -1,4 +1,5 @@
 ﻿using BarberBoss.Application.UseCases.Billings.GetAll;
+using BarberBoss.Communication.Requests;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BarberBoss.API.Controllers;
@@ -10,15 +11,13 @@ public class BillingController : ControllerBase
     [HttpGet]
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status204NoContent)]
-    public async Task<IActionResult> GetAll([FromServices] IGetAllBillingsUseCase useCase)
+    public async Task<IActionResult> GetAll(
+        [FromServices] IGetAllBillingsUseCase useCase,
+        [FromQuery] RequestGetAllBillings request
+        )
     {
-        var response = await useCase.Execute();
+        var response = await useCase.Execute(request);
 
-        if (response.Billings.Count > 0)
-        {
-            return Ok(response);
-        }
-
-        return NoContent();
+        return Ok(response);
     }
 }

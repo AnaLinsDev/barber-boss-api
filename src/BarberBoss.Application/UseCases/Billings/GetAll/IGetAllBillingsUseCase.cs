@@ -1,7 +1,8 @@
-﻿using BarberBoss.Communication.Responses;
+﻿using BarberBoss.Communication.Requests;
+using BarberBoss.Communication.Responses;
 
 namespace BarberBoss.Application.UseCases.Billings.GetAll;
 public interface IGetAllBillingsUseCase
 {
-    Task<ResponseBillingsJson> Execute();
+    Task<ResponseBillingsJson> Execute(RequestGetAllBillings request);
 }
