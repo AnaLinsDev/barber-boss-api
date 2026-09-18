@@ -123,6 +123,9 @@
   <data name="BARBER_NAME_LENGTH_INVALID" xml:space="preserve">
     <value>O nome do barbeiro deve ter entre 2 e 80 caracteres</value>
   </data>
+  <data name="BILLING_NOT_FOUND" xml:space="preserve">
+    <value>Faturamento não encontrado</value>
+  </data>
   <data name="CANCELLED_BILLING_AMOUNT_MUST_BE_ZERO" xml:space="preserve">
     <value>O valor da cobrança cancelada deve ser zero</value>
   </data>

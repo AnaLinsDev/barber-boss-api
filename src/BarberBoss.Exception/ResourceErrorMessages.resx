@@ -125,6 +125,9 @@
     <value>Barber name must be between 2 and 80 characters
 </value>
   </data>
+  <data name="BILLING_NOT_FOUND" xml:space="preserve">
+    <value>Billing not found</value>
+  </data>
   <data name="CANCELLED_BILLING_AMOUNT_MUST_BE_ZERO" xml:space="preserve">
     <value>Cancelled billing amount must be zero
 </value>

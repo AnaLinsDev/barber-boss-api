@@ -20,19 +20,28 @@ internal class BillingRepository : IBillingsReadOnlyRepository, IBillingsWriteOn
         await _dbContext.Billings.AddAsync(billing);
     }
 
-    public Task<bool> Delete(Guid id)
+    public async Task<bool> Delete(Guid id)
     {
-        throw new NotImplementedException();
+        var billing = await _dbContext.Billings.FirstOrDefaultAsync(billing => billing.Id == id);
+
+        if (billing is null)
+        {
+            return false;
+        }
+
+        _dbContext.Billings.Remove(billing);
+
+        return true;
     }
 
-    public Task<Billing?> GetById(Guid id)
+    public async Task<Billing?> GetById(Guid id)
     {
-        throw new NotImplementedException();
+        return await _dbContext.Billings.AsNoTracking().FirstOrDefaultAsync(billing => billing.Id == id);
     }
 
-    public void Update(Billing expense)
+    public void Update(Billing billing)
     {
-        throw new NotImplementedException();
+        _dbContext.Billings.Update(billing);
     }
 
     public async Task<PaginationResult> GetAll(
