@@ -1,0 +1,65 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.37411.7 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BarberBoss.API", "src\BarberBoss.API\BarberBoss.API.csproj", "{9057309C-594B-4141-BD80-CF3D8C729204}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BarberBoss.Application", "src\BarberBoss.Application\BarberBoss.Application.csproj", "{414FBE04-2231-4307-BB78-843555C54D85}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BarberBoss.Exception", "src\BarberBoss.Exception\BarberBoss.Exception.csproj", "{3CEFB1D8-1715-4074-85C4-013EB0143871}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BarberBoss.Infrastructure", "src\BarberBoss.Infrastructure\BarberBoss.Infrastructure.csproj", "{8D979521-03C1-4C14-8A5A-1ACA69ACCD04}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BarberBoss.Domain", "src\BarberBoss.Domain\BarberBoss.Domain.csproj", "{16DB5A2F-6866-446C-8A51-8F6F6D35ACBF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BarberBoss.Communication", "src\BarberBoss.Communication\BarberBoss.Communication.csproj", "{0DD22E99-12BC-4DB4-A757-057C8D8EE242}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9057309C-594B-4141-BD80-CF3D8C729204}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9057309C-594B-4141-BD80-CF3D8C729204}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9057309C-594B-4141-BD80-CF3D8C729204}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9057309C-594B-4141-BD80-CF3D8C729204}.Release|Any CPU.Build.0 = Release|Any CPU
+		{414FBE04-2231-4307-BB78-843555C54D85}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{414FBE04-2231-4307-BB78-843555C54D85}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{414FBE04-2231-4307-BB78-843555C54D85}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{414FBE04-2231-4307-BB78-843555C54D85}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3CEFB1D8-1715-4074-85C4-013EB0143871}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3CEFB1D8-1715-4074-85C4-013EB0143871}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3CEFB1D8-1715-4074-85C4-013EB0143871}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3CEFB1D8-1715-4074-85C4-013EB0143871}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D979521-03C1-4C14-8A5A-1ACA69ACCD04}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D979521-03C1-4C14-8A5A-1ACA69ACCD04}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D979521-03C1-4C14-8A5A-1ACA69ACCD04}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D979521-03C1-4C14-8A5A-1ACA69ACCD04}.Release|Any CPU.Build.0 = Release|Any CPU
+		{16DB5A2F-6866-446C-8A51-8F6F6D35ACBF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{16DB5A2F-6866-446C-8A51-8F6F6D35ACBF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{16DB5A2F-6866-446C-8A51-8F6F6D35ACBF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{16DB5A2F-6866-446C-8A51-8F6F6D35ACBF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0DD22E99-12BC-4DB4-A757-057C8D8EE242}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0DD22E99-12BC-4DB4-A757-057C8D8EE242}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0DD22E99-12BC-4DB4-A757-057C8D8EE242}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0DD22E99-12BC-4DB4-A757-057C8D8EE242}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{9057309C-594B-4141-BD80-CF3D8C729204} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{414FBE04-2231-4307-BB78-843555C54D85} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{3CEFB1D8-1715-4074-85C4-013EB0143871} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{8D979521-03C1-4C14-8A5A-1ACA69ACCD04} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{16DB5A2F-6866-446C-8A51-8F6F6D35ACBF} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{0DD22E99-12BC-4DB4-A757-057C8D8EE242} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4A25CA96-642A-4E8A-8FA2-CCAD7C4CB0BD}
+	EndGlobalSection
+EndGlobal
