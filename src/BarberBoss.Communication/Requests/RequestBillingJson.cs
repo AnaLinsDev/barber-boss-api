@@ -1,9 +1,8 @@
-﻿using BarberBoss.Domain.Enums;
+﻿using BarberBoss.Communication.Enums;
 
-namespace BarberBoss.Domain.Entities;
-public class Billing
+namespace BarberBoss.Communication.Requests;
+public class RequestBillingJson
 {
-    public Guid Id { get; set; } = Guid.NewGuid();
     public DateOnly Date { get; set; }
     public string BarberName { get; set; } = String.Empty;
     public string ClientName { get; set; } = String.Empty;
@@ -12,6 +11,4 @@ public class Billing
     public PaymentMethod PaymentMethod { get; set; }
     public Status Status { get; set; }
     public string? Notes { get; set; }
-    public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
-    public DateTime UpdatedAt { get; set; } = DateTime.UtcNow;
 }

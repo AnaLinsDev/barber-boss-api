@@ -1,4 +1,5 @@
 ﻿using BarberBoss.Application.UseCases.Billings.GetAll;
+using BarberBoss.Application.UseCases.Billings.Register;
 using BarberBoss.Communication.Requests;
 using Microsoft.AspNetCore.Mvc;
 
@@ -17,7 +18,15 @@ public class BillingController : ControllerBase
         )
     {
         var response = await useCase.Execute(request);
-
         return Ok(response);
+    }
+
+    [HttpPost] 
+    public async Task<IActionResult> Register(
+        [FromServices] IRegisterBillingUseCase useCase,
+        [FromBody] RequestBillingJson request)
+    {
+        var response = await useCase.Execute(request);
+        return Created(string.Empty, response);
     }
 }

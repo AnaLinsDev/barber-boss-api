@@ -3,4 +3,5 @@ public enum Status
 {
     Paid = 0, 
     Canceled = 1,
+    Open = 2
 }
