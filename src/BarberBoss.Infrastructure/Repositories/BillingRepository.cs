@@ -3,6 +3,7 @@ using BarberBoss.Domain.Repositories;
 using BarberBoss.Infrastructure.DataAccess;
 using BarberBoss.Infrastructure.Helpers;
 using Microsoft.EntityFrameworkCore;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace BarberBoss.Infrastructure.Repositories;
 internal class BillingRepository : IBillingsReadOnlyRepository, IBillingsWriteOnlyRepository, IBillingsUpdateOnlyRepository
@@ -34,7 +35,7 @@ internal class BillingRepository : IBillingsReadOnlyRepository, IBillingsWriteOn
         return true;
     }
 
-     async Task<Billing?> IBillingsReadOnlyRepository.GetById(Guid id)
+    async Task<Billing?> IBillingsReadOnlyRepository.GetById(Guid id)
     {
         return await _dbContext.Billings.AsNoTracking().FirstOrDefaultAsync(billing => billing.Id == id);
     }
@@ -143,4 +144,24 @@ internal class BillingRepository : IBillingsReadOnlyRepository, IBillingsWriteOn
         };
     }
 
+    public async Task<List<Billing>> FilterByMonth(DateOnly date)
+    {
+        var startDate = new DateOnly(
+            date.Year,
+            date.Month,
+            1);
+
+        var endDate = startDate.AddMonths(1);
+
+        return await _dbContext
+            .Billings
+            .AsNoTracking()
+            .Where(billing =>
+                billing.Date >= startDate &&
+                billing.Date < endDate)
+            .OrderBy(expense => expense.Date)
+            .ThenBy(expense => expense.ServiceName)
+            .ToListAsync();
+    }
 }
+

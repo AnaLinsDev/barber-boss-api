@@ -9,4 +9,6 @@ public interface IBillingsReadOnlyRepository
         string? filterBy,
         int page);
     Task<Billing?> GetById(Guid id);
+
+    Task<List<Billing>> FilterByMonth(DateOnly month);
 }
