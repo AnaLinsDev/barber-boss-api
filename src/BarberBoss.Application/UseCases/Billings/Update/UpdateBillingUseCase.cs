@@ -1,20 +1,21 @@
 ﻿using AutoMapper;
+using BarberBoss.Application.UseCases.Billings.Register;
 using BarberBoss.Communication.Requests;
 using BarberBoss.Communication.Responses;
 using BarberBoss.Domain.Entities;
 using BarberBoss.Domain.Repositories;
+using BarberBoss.Exception;
 using BarberBoss.Exception.ExceptionsBase;
-using System.ComponentModel.DataAnnotations;
 
-
-namespace BarberBoss.Application.UseCases.Billings.Register;
-public class RegisterBillingUseCase : IRegisterBillingUseCase
+namespace BarberBoss.Application.UseCases.Billings.Update;
+public class UpdateBillingUseCase : IUpdateBillingUseCase
 {
-    private readonly IBillingsWriteOnlyRepository _repository;
+
+    private readonly IBillingsUpdateOnlyRepository _repository;
     private readonly IMapper _mapper;
     private readonly IUnitOfWork _unitOfWork;
-    public RegisterBillingUseCase(
-        IBillingsWriteOnlyRepository repository,
+    public UpdateBillingUseCase(
+        IBillingsUpdateOnlyRepository repository,
         IMapper mapper, IUnitOfWork
         unitOfWork)
     {
@@ -23,17 +24,24 @@ public class RegisterBillingUseCase : IRegisterBillingUseCase
         _unitOfWork = unitOfWork;
     }
 
-    public async Task<ResponseBillingJson> Execute(RequestBillingJson request)
+    public async Task Execute(Guid id, RequestBillingJson request)
     {
-
         Validate(request);
 
-        var entity = _mapper.Map<Billing>(request);
+        var billing = await _repository.GetById(id);
 
-        await _repository.Add(entity);
+        if (billing == null)
+        {
+            throw new NotFoundException(ResourceErrorMessages.BILLING_NOT_FOUND);
+        }
+
+        _mapper.Map(request, billing);
+
+        billing.UpdatedAt = DateTime.UtcNow;
+        billing.CreatedAt = DateTime.UtcNow;
+
+        _repository.Update(billing);
         await _unitOfWork.Commit();
-
-        return _mapper.Map<ResponseBillingJson>(entity);
     }
 
     private void Validate(RequestBillingJson request)
@@ -48,7 +56,5 @@ public class RegisterBillingUseCase : IRegisterBillingUseCase
 
             throw new ErrorOnValidationException(errorMessages);
         }
-
     }
-
 }

@@ -34,9 +34,14 @@ internal class BillingRepository : IBillingsReadOnlyRepository, IBillingsWriteOn
         return true;
     }
 
-    public async Task<Billing?> GetById(Guid id)
+     async Task<Billing?> IBillingsReadOnlyRepository.GetById(Guid id)
     {
         return await _dbContext.Billings.AsNoTracking().FirstOrDefaultAsync(billing => billing.Id == id);
+    }
+
+    async Task<Billing?> IBillingsUpdateOnlyRepository.GetById(Guid id)
+    {
+        return await _dbContext.Billings.FirstOrDefaultAsync(billing => billing.Id == id);
     }
 
     public void Update(Billing billing)
