@@ -144,7 +144,7 @@ internal class BillingRepository : IBillingsReadOnlyRepository, IBillingsWriteOn
         };
     }
 
-    public async Task<List<Billing>> FilterByMonth(DateOnly date)
+    public async Task<List<Billing>> FilterByMonthPaidOrOpen(DateOnly date)
     {
         var startDate = new DateOnly(
             date.Year,

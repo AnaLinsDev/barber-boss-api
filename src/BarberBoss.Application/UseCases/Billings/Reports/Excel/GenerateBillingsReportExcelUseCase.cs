@@ -14,7 +14,7 @@ public class GenerateBillingsReportExcelUseCase : IGenerateBillingsReportExcelUs
 
     public async Task<byte[]> Execute(DateOnly month)
     {
-        var billings = await _repository.FilterByMonth(month);
+        var billings = await _repository.FilterByMonthPaidOrOpen(month);
 
         using var workbook = new XLWorkbook();
 
@@ -60,8 +60,8 @@ public class GenerateBillingsReportExcelUseCase : IGenerateBillingsReportExcelUs
 
         worksheet.Cell("A1").Style.Alignment.SetHorizontal(XLAlignmentHorizontalValues.Center);
         worksheet.Cell("B1").Style.Alignment.SetHorizontal(XLAlignmentHorizontalValues.Center);
-        worksheet.Cell("C1").Style.Alignment.SetHorizontal(XLAlignmentHorizontalValues.Center);
+        worksheet.Cell("D1").Style.Alignment.SetHorizontal(XLAlignmentHorizontalValues.Center);
 
-        worksheet.Cell("D1").Style.Alignment.SetHorizontal(XLAlignmentHorizontalValues.Right);
+        worksheet.Cell("C1").Style.Alignment.SetHorizontal(XLAlignmentHorizontalValues.Right);
     }
 }

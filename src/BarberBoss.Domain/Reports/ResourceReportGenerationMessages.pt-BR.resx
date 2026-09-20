@@ -120,6 +120,9 @@
   <data name="AMOUNT" xml:space="preserve">
     <value>Valor</value>
   </data>
+  <data name="BARBER_TITLE" xml:space="preserve">
+    <value>Barbearia do João</value>
+  </data>
   <data name="DATE" xml:space="preserve">
     <value>Data</value>
   </data>
@@ -128,5 +131,8 @@
   </data>
   <data name="SERVICE_NAME" xml:space="preserve">
     <value>Nome do serviço</value>
+  </data>
+  <data name="WEEKLY_REVENUE" xml:space="preserve">
+    <value>Faturamento da semana</value>
   </data>
 </root>

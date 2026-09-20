@@ -7,10 +7,29 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Logo\logo.png" />
+    <None Remove="UseCases\Billings\Reports\Pdf\Fonts\Raleway-Black.ttf" />
+    <None Remove="UseCases\Billings\Reports\Pdf\Fonts\Raleway-Regular.ttf" />
+    <None Remove="UseCases\Billings\Reports\Pdf\Fonts\WorkSans-Black.ttf" />
+    <None Remove="UseCases\Billings\Reports\Pdf\Fonts\WorkSans-Regular.ttf" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Logo\logo.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UseCases\Billings\Reports\Pdf\Fonts\Raleway-Black.ttf" />
+    <EmbeddedResource Include="UseCases\Billings\Reports\Pdf\Fonts\Raleway-Regular.ttf" />
+    <EmbeddedResource Include="UseCases\Billings\Reports\Pdf\Fonts\WorkSans-Black.ttf" />
+    <EmbeddedResource Include="UseCases\Billings\Reports\Pdf\Fonts\WorkSans-Regular.ttf" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="AutoMapper" Version="16.2.0" />
     <PackageReference Include="ClosedXML" Version="0.102.2" />
     <PackageReference Include="FluentValidation" Version="12.1.1" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="10.0.12" />
+    <PackageReference Include="PDFsharp-MigraDoc" Version="6.2.4" />
   </ItemGroup>
 
   <ItemGroup>

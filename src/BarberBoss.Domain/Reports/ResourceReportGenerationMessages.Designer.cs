@@ -70,6 +70,15 @@ namespace BarberBoss.Domain.Reports {
         }
         
         /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a João&apos;s Barber Shop.
+        /// </summary>
+        public static string BARBER_TITLE {
+            get {
+                return ResourceManager.GetString("BARBER_TITLE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Date.
         /// </summary>
         public static string DATE {
@@ -93,6 +102,15 @@ namespace BarberBoss.Domain.Reports {
         public static string SERVICE_NAME {
             get {
                 return ResourceManager.GetString("SERVICE_NAME", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Weekly Revenue.
+        /// </summary>
+        public static string WEEKLY_REVENUE {
+            get {
+                return ResourceManager.GetString("WEEKLY_REVENUE", resourceCulture);
             }
         }
     }

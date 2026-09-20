@@ -10,5 +10,5 @@ public interface IBillingsReadOnlyRepository
         int page);
     Task<Billing?> GetById(Guid id);
 
-    Task<List<Billing>> FilterByMonth(DateOnly month);
+    Task<List<Billing>> FilterByMonthPaidOrOpen(DateOnly month);
 }
