@@ -22,9 +22,9 @@ public class GenerateBillingsReportPdfUseCase : IGenerateBillingsReportPdfUseCas
 
     public async Task<byte[]> Execute(DateOnly month)
     {
-        var expenses = await _repository.FilterByMonthPaidOrOpen(month);
+        var billings = await _repository.FilterByMonthPaidOrOpen(month);
 
-        if (expenses.Count == 0)
+        if (billings.Count == 0)
         {
             return [];
         }
@@ -34,7 +34,43 @@ public class GenerateBillingsReportPdfUseCase : IGenerateBillingsReportPdfUseCas
 
         CreateHeaderWithLogoAndName(page);
 
+        var totalExpenses = billings
+        .Where(b => b.Status != Domain.Enums.Status.Canceled)
+        .Sum(b => b.Amount);
+
+        CreateTotalSpentSection(page, month, totalExpenses);
+
         return RenderDocument(document);
+    }
+
+    private void CreateTotalSpentSection(Section page, DateOnly month, decimal total)
+    {
+        var paragraph = page.AddParagraph();
+        paragraph.Format.SpaceBefore = "40";
+        paragraph.Format.SpaceAfter = "40";
+
+        var title = String.Format(ResourceReportGenerationMessages.WEEKLY_REVENUE, month.ToString("Y"));
+
+        paragraph.AddFormattedText(
+            title,
+            new Font
+            {
+                Name = FontHelper.RALEWAY_REGULAR,
+                Size = 15
+            });
+
+        paragraph.AddLineBreak();
+
+        var totalExpensesFormatted = $"{CURRENCY_SYMBOL} {total}";
+
+        paragraph.AddFormattedText(
+            totalExpensesFormatted,
+            new Font
+            {
+                Name = FontHelper.WORKSANS_BLACK,
+                Size = 50
+            });
+
     }
 
     private void CreateHeaderWithLogoAndName(Section page)
