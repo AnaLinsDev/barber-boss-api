@@ -99,7 +99,7 @@ public class GenerateBillingsReportPdfUseCase : IGenerateBillingsReportPdfUseCas
         {
             Name = FontHelper.ROBOTO_REGULAR,
             Size = 10,
-            Color = ColorsHelper.BLACK
+            Color = ColorsHelper.GRAY
         };
     }
 
