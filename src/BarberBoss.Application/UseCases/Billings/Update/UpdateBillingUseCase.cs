@@ -1,8 +1,6 @@
 ﻿using AutoMapper;
 using BarberBoss.Application.UseCases.Billings.Register;
 using BarberBoss.Communication.Requests;
-using BarberBoss.Communication.Responses;
-using BarberBoss.Domain.Entities;
 using BarberBoss.Domain.Repositories;
 using BarberBoss.Exception;
 using BarberBoss.Exception.ExceptionsBase;

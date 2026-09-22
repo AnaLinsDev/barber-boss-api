@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.37411.7 d17.14
+VisualStudioVersion = 17.14.37411.7
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
 EndProject
@@ -16,6 +16,12 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BarberBoss.Domain", "src\BarberBoss.Domain\BarberBoss.Domain.csproj", "{16DB5A2F-6866-446C-8A51-8F6F6D35ACBF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BarberBoss.Communication", "src\BarberBoss.Communication\BarberBoss.Communication.csproj", "{0DD22E99-12BC-4DB4-A757-057C8D8EE242}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{2B5A53F7-6BE3-44AD-9DE8-0EB4F0870837}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Validators.Tests", "tests\Validators.Tests\Validators.Tests.csproj", "{8F4C6AC7-5431-4956-B813-92079AE31521}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommonTestUtilities", "tests\CommonTestUtilities\CommonTestUtilities.csproj", "{2BE2D233-8B0B-441D-9C9C-9B2C7066BFAC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -47,6 +53,14 @@ Global
 		{0DD22E99-12BC-4DB4-A757-057C8D8EE242}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0DD22E99-12BC-4DB4-A757-057C8D8EE242}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0DD22E99-12BC-4DB4-A757-057C8D8EE242}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F4C6AC7-5431-4956-B813-92079AE31521}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F4C6AC7-5431-4956-B813-92079AE31521}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F4C6AC7-5431-4956-B813-92079AE31521}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F4C6AC7-5431-4956-B813-92079AE31521}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2BE2D233-8B0B-441D-9C9C-9B2C7066BFAC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2BE2D233-8B0B-441D-9C9C-9B2C7066BFAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2BE2D233-8B0B-441D-9C9C-9B2C7066BFAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2BE2D233-8B0B-441D-9C9C-9B2C7066BFAC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -58,6 +72,8 @@ Global
 		{8D979521-03C1-4C14-8A5A-1ACA69ACCD04} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 		{16DB5A2F-6866-446C-8A51-8F6F6D35ACBF} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 		{0DD22E99-12BC-4DB4-A757-057C8D8EE242} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{8F4C6AC7-5431-4956-B813-92079AE31521} = {2B5A53F7-6BE3-44AD-9DE8-0EB4F0870837}
+		{2BE2D233-8B0B-441D-9C9C-9B2C7066BFAC} = {2B5A53F7-6BE3-44AD-9DE8-0EB4F0870837}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4A25CA96-642A-4E8A-8FA2-CCAD7C4CB0BD}
