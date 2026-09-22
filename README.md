@@ -2,6 +2,8 @@
 
 A RESTful Web API built with **C# and ASP.NET Core** for manage a barber's charges.
 
+![main-image]
+
 ## Technologies
 ![badge-dot-net]
 ![badge-windows]
@@ -120,6 +122,9 @@ The terminal will display the URL where the API is running.
 Open the Swagger URL displayed by the application in your browser.
 
 Swagger can be used to test the available API endpoints without requiring Postman or another API client.
+
+<!-- Images -->
+[main-image]: images/readme_image.png
 
 <!-- Badges -->
 [badge-dot-net]: https://img.shields.io/badge/.NET-512BD4?logo=dotnet&logoColor=fff&style=for-the-badge
