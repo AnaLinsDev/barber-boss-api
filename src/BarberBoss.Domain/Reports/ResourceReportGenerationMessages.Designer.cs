@@ -79,6 +79,15 @@ namespace BarberBoss.Domain.Reports {
         }
         
         /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Card.
+        /// </summary>
+        public static string CARD {
+            get {
+                return ResourceManager.GetString("CARD", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Date.
         /// </summary>
         public static string DATE {
@@ -88,11 +97,38 @@ namespace BarberBoss.Domain.Reports {
         }
         
         /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Money.
+        /// </summary>
+        public static string MONEY {
+            get {
+                return ResourceManager.GetString("MONEY", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Notes.
         /// </summary>
         public static string NOTES {
             get {
                 return ResourceManager.GetString("NOTES", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Other.
+        /// </summary>
+        public static string OTHER {
+            get {
+                return ResourceManager.GetString("OTHER", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Pix.
+        /// </summary>
+        public static string PIX {
+            get {
+                return ResourceManager.GetString("PIX", resourceCulture);
             }
         }
         

@@ -158,7 +158,8 @@ internal class BillingRepository : IBillingsReadOnlyRepository, IBillingsWriteOn
             .AsNoTracking()
             .Where(billing =>
                 billing.Date >= startDate &&
-                billing.Date < endDate)
+                billing.Date < endDate &&
+                billing.Status != Domain.Enums.Status.Canceled)
             .OrderBy(expense => expense.Date)
             .ThenBy(expense => expense.ServiceName)
             .ToListAsync();

@@ -8,8 +8,10 @@
 
   <ItemGroup>
     <None Remove="Logo\logo.png" />
+    <None Remove="UseCases\Billings\Reports\Pdf\Fonts\BebasNeue-Regular.ttf" />
     <None Remove="UseCases\Billings\Reports\Pdf\Fonts\Raleway-Black.ttf" />
     <None Remove="UseCases\Billings\Reports\Pdf\Fonts\Raleway-Regular.ttf" />
+    <None Remove="UseCases\Billings\Reports\Pdf\Fonts\Roboto-Regular.ttf" />
     <None Remove="UseCases\Billings\Reports\Pdf\Fonts\WorkSans-Black.ttf" />
     <None Remove="UseCases\Billings\Reports\Pdf\Fonts\WorkSans-Regular.ttf" />
   </ItemGroup>
@@ -18,8 +20,10 @@
     <EmbeddedResource Include="Logo\logo.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
+    <EmbeddedResource Include="UseCases\Billings\Reports\Pdf\Fonts\BebasNeue-Regular.ttf" />
     <EmbeddedResource Include="UseCases\Billings\Reports\Pdf\Fonts\Raleway-Black.ttf" />
     <EmbeddedResource Include="UseCases\Billings\Reports\Pdf\Fonts\Raleway-Regular.ttf" />
+    <EmbeddedResource Include="UseCases\Billings\Reports\Pdf\Fonts\Roboto-Regular.ttf" />
     <EmbeddedResource Include="UseCases\Billings\Reports\Pdf\Fonts\WorkSans-Black.ttf" />
     <EmbeddedResource Include="UseCases\Billings\Reports\Pdf\Fonts\WorkSans-Regular.ttf" />
   </ItemGroup>

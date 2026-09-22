@@ -123,11 +123,23 @@
   <data name="BARBER_TITLE" xml:space="preserve">
     <value>Barbearia do João</value>
   </data>
+  <data name="CARD" xml:space="preserve">
+    <value>Cartão</value>
+  </data>
   <data name="DATE" xml:space="preserve">
     <value>Data</value>
   </data>
+  <data name="MONEY" xml:space="preserve">
+    <value>Dinheiro</value>
+  </data>
   <data name="NOTES" xml:space="preserve">
     <value>Anotações</value>
+  </data>
+  <data name="Other" xml:space="preserve">
+    <value>Outro</value>
+  </data>
+  <data name="PIX" xml:space="preserve">
+    <value>Pix</value>
   </data>
   <data name="SERVICE_NAME" xml:space="preserve">
     <value>Nome do serviço</value>
